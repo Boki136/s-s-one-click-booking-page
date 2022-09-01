@@ -1,6 +1,9 @@
 $('.change-stylist__button').click(function() {
     $('.select__stylist').removeClass('hide_el');
-})
+});
+$('.change-location__button').click(function() {
+    $('.change__location').removeClass('hide_el');
+});
 
 $('.close__modal').click(function() {
     $(this).closest('.modal__wrapper').addClass('hide_el')
