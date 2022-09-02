@@ -1,3 +1,7 @@
+body {
+    overflow-y: hidden;
+}
+
 .hide_el {
     display: none;
 }
@@ -159,6 +163,11 @@
     text-align: center;
 }
 
+.date-selector input,
+.time-selector input {
+    background: transparent;
+}
+
 .date-selector input::-webkit-calendar-picker-indicator,
 .time-selector input::-webkit-calendar-picker-indicator {
     position: absolute;
@@ -171,7 +180,7 @@
 .date-selector input::after {
     content: "\f073";
     font-family: "Font Awesome 5 Free";
-    background: white;
+    background: transparent;
     color: #ed1c24;
     font-weight: 900;
 }
@@ -179,7 +188,7 @@
 .time-selector input::after {
     content: "\f017";
     font-family: "Font Awesome 5 Free";
-    background: white;
+    background: transparent;
     color: #ed1c24;
     font-weight: 900;
 }
