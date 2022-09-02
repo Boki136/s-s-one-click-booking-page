@@ -524,11 +524,11 @@ body {
         font-size: 0 !important;
     }
     .change-stylist__button::after {
-        content: '( edit)';
+        content: ' (edit)';
         font-size: 14px;
     }
     .change-location__button::after {
-        content: '( edit)';
+        content: ' (edit)';
         font-size: 14px !important;
     }
     .appointment-details-service__single .change__button {
