@@ -1,12 +1,14 @@
 $('.change-stylist__button').click(function() {
     $('.select__stylist').removeClass('hide_el');
+    $('.book__later').hide();
 });
 $('.change-location__button').click(function() {
     $('.change__location').removeClass('hide_el');
 });
 
 $('.close__modal').click(function() {
-    $(this).closest('.modal__wrapper').addClass('hide_el')
+    $(this).closest('.modal__wrapper').addClass('hide_el');
+    $('.book__later').show();
 })
 
 let specificStylistBtn = $('.select__stylist form button');
