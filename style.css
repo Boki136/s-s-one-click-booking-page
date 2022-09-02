@@ -166,6 +166,7 @@ body {
 .date-selector input,
 .time-selector input {
     background: transparent;
+     color: #ed1c24;
 }
 
 .date-selector input::-webkit-calendar-picker-indicator,
