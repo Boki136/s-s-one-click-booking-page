@@ -19,7 +19,7 @@
 }
 
 .mobile__only {
-    display: none;
+    display: none !important;
 }
 
 .change__button {
@@ -41,6 +41,16 @@
 .change__button:focus {
     border: none;
     outline: none;
+}
+
+.promo-btn {
+    background-color: transparent !important;
+    color: #461e0d;
+    border: 0.0625rem solid #e7eaf3 !important;
+}
+
+.promo-btn:hover {
+    color: #461e0d !important;
 }
 
 .background-img--wrapper {
@@ -69,10 +79,20 @@
     position: relative;
 }
 
+.stylist__image i:nth-child(4) {
+    color: #dfdfdf;
+    position: relative;
+    bottom: 6px;
+    padding-left: 2px;
+}
+
+.tooltiptext {
+    font-family: "proxima-nova", arial, sans-serif !important;
+}
+
 .tooltip__wrapper {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
 }
 
 .tooltip__wrapper .tooltiptext {
@@ -83,8 +103,7 @@
     text-align: center;
     border-radius: 6px;
     font-size: .9em;
-    padding: 5px 0;
-    /* Position the tooltip */
+    padding: 10px;
     position: absolute;
     z-index: 1;
 }
@@ -140,18 +159,37 @@
     text-align: center;
 }
 
-.date-selector input::-webkit-calendar-picker-indicator {
+.date-selector input::-webkit-calendar-picker-indicator,
+.time-selector input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 2px;
+    color: #fff;
+    background-color: transparent;
+    visibility: hidden;
+}
+
+.date-selector input::after {
     content: "\f073";
     font-family: "Font Awesome 5 Free";
     background: white;
     color: #ed1c24;
+    font-weight: 900;
 }
 
-.time-selector input::-webkit-calendar-picker-indicator {
+.time-selector input::after {
     content: "\f017";
     font-family: "Font Awesome 5 Free";
     background: white;
     color: #ed1c24;
+    font-weight: 900;
+}
+
+.promo-code__title {
+    width: 100%;
+}
+
+.promo__expand {
+    overflow: visible !important;
 }
 
 .search-location__input {
@@ -164,7 +202,13 @@
 }
 
 .search-location__input::placeholder {
-    color: rgba(119, 131, 143, .6)
+    color: rgba(119, 131, 143, .6);
+}
+
+.content__divider {
+    height: 18px;
+    width: 1px;
+    background-color: #d9d9d9;
 }
 
 
@@ -191,12 +235,13 @@
 
 .close__modal {
     position: absolute;
-    right: -60px;
+    right: 0;
     top: 40px;
     z-index: 999;
-    width: 10px;
-    height: 10px;
-    background-color: red;
+    font-size: 20px;
+    color: #ed1c24;
+    cursor: pointer;
+    font-size: 25px;
 }
 
 .progress-bar__content {
@@ -269,12 +314,16 @@
     padding-left: 8px;
 }
 
+.progress-bar__mobile {
+    padding: 50px 0 !important;
+}
+
 .progress-bar__mobile .first-step .progress__img {
-    left: 32%;
+    left: 36%;
 }
 
 .progress-bar__mobile .progress__img {
-    top: 159px;
+    top: 82px;
     width: 40px;
 }
 
@@ -293,10 +342,10 @@
 
 @media only screen and (max-width: 991px) {
     .desktop__only {
-        display: none;
+        display: none !important;
     }
     .mobile__only {
-        display: block;
+        display: block !important;
     }
     .background-img--wrapper {
         background: none;
@@ -337,6 +386,9 @@
     .service-summary__wrapper {
         width: 100%;
     }
+    .main__content {
+        margin-top: 90px !important;
+    }
     .service-summary__wrapper .card,
     .appointment-details__wrapper {
         box-shadow: none;
@@ -352,12 +404,7 @@
         padding: 0 !important;
     }
     .service-summary__wrapper .form-group {
-        border: none !important;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
-        border-radius: 5px;
-    }
-    .service-summary__wrapper .form-group textarea {
-        border: none !important;
+        border-radius: 10px;
     }
     .appointment-details__stylist h3 {
         color: #fff;
@@ -369,15 +416,11 @@
         text-align: center;
         border-bottom: none !important;
     }
-    .appointment-details__stylist h3::after {
-        content: 'Want the usual?';
-        font-size: 20px;
-        color: #461e0d;
-    }
     #shopCartAccordion {
         border-bottom: 0.0625rem solid #e7eaf3;
         padding-bottom: 15px !important;
         border-radius: 0;
+        cursor: pointer;
     }
     #shopCartAccordion .card {
         border: 1px solid #e7eaea;
@@ -394,9 +437,9 @@
     #booking-form>div {
         padding: 0 !important;
     }
-    .booking-details__wrapper .mb-4,
-    .my-4 {
+    .booking-details__wrapper .mb-4 {
         margin-bottom: 15px !important;
+        padding-bottom: 5px !important;
     }
     .appoinment-details__time input {
         height: 39px;
@@ -404,6 +447,28 @@
     .tooltip__wrapper .tooltiptext {
         left: -90px;
         bottom: -90px;
+    }
+    .need-help__content {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+    }
+    .appoinment-details__time .d-flex {
+        flex-direction: row;
+        align-items: center;
+        border: .0625rem solid rgba(231, 234, 243, .7);
+        justify-content: space-around;
+        padding: 5px 8px;
+    }
+    .appoinment-details__time .d-flex input {
+        border: none;
+        flex-direction: row-reverse;
+        height: 40px;
+    }
+    .date-selector input::after,
+    .time-selector input::after {
+        padding-right: 7px;
     }
     /* modals */
     .progress-steps {
@@ -422,6 +487,18 @@
         padding: 0 !important;
         margin-left: 0 !important;
         margin-top: 18px;
+    }
+    .appoinment-details__time p {
+        font-size: .9em;
+    }
+    .booking-details__wrapper {
+        padding: 1.3rem;
+    }
+    .hero-text__content {
+        margin-bottom: 25px !important;
+    }
+    .close__modal {
+        right: 25px;
     }
 }
 
@@ -445,13 +522,23 @@
         content: '(edit)';
         font-size: 14px !important;
     }
-    .book__later {
-        bottom: -125px;
-    }
     .appointment-details-service__single .change__button {
         position: absolute;
         right: 0;
         bottom: 8px;
         padding: 0;
+    }
+    .book__later.mobile__only {
+        line-height: 15px;
+    }
+    .book__later.mobile__only a {
+        font-size: .85em;
+        line-height: 15px;
+    }
+    .appoinment-details__time .d-flex {
+        padding: 5px 2px;
+    }
+    .appoinment-details__time input {
+        padding: 0 5px;
     }
 }
