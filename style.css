@@ -550,4 +550,7 @@ body {
     .appoinment-details__time input {
         padding: 0 5px;
     }
+     .modal__wrapper {
+        height: 150vh;
+    }
 }
