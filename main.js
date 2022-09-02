@@ -34,3 +34,16 @@ $('.modal__wrapper .step-back__stylist').click(function() {
     $(this).closest('.modal__wrapper').addClass('hide_el');
     $('.select__stylist').removeClass('hide_el')
 })
+
+//open promo code
+let clickCount = 1;
+$('.promo-code__title').click(function() {
+    clickCount++;
+    $('.promo__expand').slideDown(200);
+
+    if (clickCount % 2) {
+        setTimeout(function() {
+            $('#shopCartOne').slideUp(200);
+        }, 100)
+    }
+})
