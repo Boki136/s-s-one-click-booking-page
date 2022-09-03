@@ -9,7 +9,7 @@ $('.change-location__button').click(function() {
 
 $('.close__modal').click(function() {
     $(this).closest('.modal__wrapper').addClass('hide_el');
-    $('body').css('overflow', 'hidden');
+    $('body').css('overflow', 'visible');
 })
 
 //remove when buttons are working start
