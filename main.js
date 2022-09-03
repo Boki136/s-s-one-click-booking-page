@@ -10,9 +10,13 @@ $('.change-location__button').click(function() {
 $('.close__modal').click(function() {
     $(this).closest('.modal__wrapper').addClass('hide_el');
     $('body').css('overflow', 'visible');
-})
+});
 
-//remove when buttons are working start
+$('.step__back').click(function() {
+    $('body').css('overflow', 'visible');
+});
+
+//remove when buttons are working --start
 
 let specificStylistBtn = $('.select__stylist form button');
 let specificDateBtn = $('.select__day form button');
@@ -35,7 +39,7 @@ specificTimeBtn.closest('form').on('submit', function(e) {
     $('.select__time').addClass('hide_el');
 })
 
-//remove when buttons are working end
+//remove when buttons are working --end
 
 $('.modal__wrapper .step-back__stylist').click(function() {
     $(this).closest('.modal__wrapper').addClass('hide_el');
