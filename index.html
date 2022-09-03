@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="booking-and-account-custom-css.css">
+    <link rel="stylesheet" href="booking-and-account-theme.min.css">
+    <link rel="stylesheet" href="font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="/static/ss-assets/front/ss-design/assets/vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/static/front-assets/vendor/fontawesome-lfg/css/all.min.css"> -->
+    <script src="https://kit.fontawesome.com/88ddfd17d7.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        .tk-proxima-nova {
+            font-family: "proxima-nova", sans-serif;
+        }
+    </style>
+    <style type="text/css">
+        @font-face {
+            font-family: tk-proxima-nova-n7;
+            src: url(https://use.typekit.net/af/925423/00000000000000003b9b038f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"), url(https://use.typekit.net/af/925423/00000000000000003b9b038f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"), url(https://use.typekit.net/af/925423/00000000000000003b9b038f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+        
+        @font-face {
+            font-family: tk-proxima-nova-i7;
+            src: url(https://use.typekit.net/af/cd78b3/00000000000000003b9b038e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"), url(https://use.typekit.net/af/cd78b3/00000000000000003b9b038e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"), url(https://use.typekit.net/af/cd78b3/00000000000000003b9b038e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");
+            font-weight: 700;
+            font-style: italic;
+            font-stretch: normal;
+            font-display: auto;
+        }
+        
+        @font-face {
+            font-family: tk-proxima-nova-n4;
+            src: url(https://use.typekit.net/af/219c30/00000000000000003b9b0389/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/219c30/00000000000000003b9b0389/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/219c30/00000000000000003b9b0389/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");
+            font-weight: 400;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+        
+        @font-face {
+            font-family: tk-proxima-nova-i4;
+            src: url(https://use.typekit.net/af/0de7d4/00000000000000003b9b0388/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"), url(https://use.typekit.net/af/0de7d4/00000000000000003b9b0388/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"), url(https://use.typekit.net/af/0de7d4/00000000000000003b9b0388/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");
+            font-weight: 400;
+            font-style: italic;
+            font-stretch: normal;
+            font-display: auto;
+        }
+        
+        @font-face {
+            font-family: tk-proxima-nova-n3;
+            src: url(https://use.typekit.net/af/ed2fe5/00000000000000003b9b0387/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"), url(https://use.typekit.net/af/ed2fe5/00000000000000003b9b0387/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"), url(https://use.typekit.net/af/ed2fe5/00000000000000003b9b0387/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+    </style>
+</head>
+
+<body class="diamond-background">
+    <div class="background-img--wrapper">
+        <header id="header" class="header">
+            <div class="header-section no-background__modifier">
+                <div class="container header-hide-content pt-2">
+                    <div id="logoAndNav" class="container">
+                        <!-- Nav -->
+                        <nav class="js-mega-menu navbar navbar-expand-lg hs-menu-initialized hs-menu-horizontal">
+                            <!-- Logo -->
+                            <a class="navbar-brand" href="/home" aria-label="Front">
+                                <img src="./media/white_logo.svg" alt="Logo">
+                            </a>
+                            <!-- End Logo -->
+                            <!-- Responsive Toggle Button -->
+                            <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+                                <span class="navbar-toggler-default">
+                                    <svg width="14" height="14"
+                                        viewBox="0 0 18 18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="currentColor"
+                                            d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span class="navbar-toggler-toggled">
+                                    <svg width="14" height="14"
+                                        viewBox="0 0 18 18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="currentColor"
+                                            d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <!-- End Responsive Toggle Button -->
+                            <!-- Navigation -->
+                            <div id="navBar" class="collapse navbar-collapse">
+                                <ul class="navbar-nav">
+                                    <li class="navbar-nav-item">
+                                        <a class="nav-link active nav-loading-trigger" href="/home">Home</a>
+                                    </li>
+                                    <!-- Listings -->
+                                    <li class="navbar-nav-item mr-lg-auto">
+                                        <a id="jobListingsMegaMenu" class="hs-mega-menu-invoker nav-link nav-loading-trigger" href="/services" aria-haspopup="true" aria-expanded="false" aria-labelledby="jobsSubMenuListing">Services</a>
+                                    </li>
+                                    <!-- End Listings -->
+                                    <!-- Listings -->
+                                    <li class="navbar-nav-item mr-lg-auto">
+                                        <a id="jobListingsMegaMenu" class="hs-mega-menu-invoker nav-link nav-loading-trigger" href="/memberships" aria-haspopup="true" aria-expanded="false" aria-labelledby="jobsSubMenuListing">Memberships</a>
+                                    </li>
+                                    <!-- End Listings -->
+                                    <!-- Listings -->
+                                    <li class="navbar-nav-item mr-lg-auto">
+                                        <a id="giftCards" class="hs-mega-menu-invoker nav-link nav-loading-trigger" href="/gift-card" aria-haspopup="true" aria-expanded="false" aria-labelledby="giftCard">Gift
+                                            Cards</a>
+                                    </li>
+                                    <!-- End Listings -->
+                                    <!-- Listings -->
+                                    <li class="nav-item u-header__nav-last-item">
+                                        <a id="homeMegaMenu" class="nav-link u-header__nav-link profile-button ml-n2" href="/account"><span
+                                                class="fas fa-user-circle mr-2 map-marker modal-size"></span></a>
+                                    </li>
+                                    <!-- End Listings -->
+                                </ul>
+                            </div>
+                            <!-- End Navigation -->
+                        </nav>
+                        <!-- End Nav -->
+                    </div>
+                    <!-- ========== END HEADER ========== -->
+                </div>
+        </header>
+        <!--Hero text-->
+        <section class="container space-3 space-top-3 hero-text__wrapper">
+            <div class="w-80 text-center mx-auto mb-7 fadein-1 hero-text__content">
+                <h1 class="display-5 text-white font-weight-bold uppercase mb-sm-4 fadeInUp u-in-viewport desktop__only">
+                    <span class="user__name">John</span>, we are glad to see you back
+                </h1>
+                <h1 class="display-5 text-white font-weight-bold uppercase mb-sm-4 fadeInUp u-in-viewport mobile__only">
+                    <span class="user__name">John</span>, book again in a click
+                </h1>
+                <p class="pb-5 w-80 mx-auto border-bottom text-white">
+                    We’ve saved you last appointment details with you favourite location and stylist. Feel free to change anything or if we’re spot on book again</p>
+            </div>
+        </section>
+        <!--Booking details-->
+        <section class="container booking-details__wrapper w-90">
+            <div class="card p-5 mb-4 appointment-details__wrapper">
+                <!-------stylist info-->
+                <div class="appointment-details__stylist">
+                    <h3 class="h3 border-bottom mb-4 pb-3 text-brown desktop__only">
+                        Your last appointment details </h3>
+                    <!--stylist image-->
+                    <div class="stylist__image mb-4">
+                        <img src="./media/stylist-img-placeholder.jpg" />
+                        <i class="fas fa-fire text-secondary pl-2"></i>
+                        <!--show if stylist is elite-->
+                        <span class="text-secondary font-weight-bold pl-1 elite__stylist">Elite
+                            Stylist</span>
+                        <i class="fas fa-info-circle tooltip__wrapper">
+                            <span class="tooltiptext">Our elite
+                                stylists are more experienced &
+                                skilled, so we charge a little bit
+                                more.</span>
+                        </i>
+                    </div>
+                    <!--stylist name-->
+                    <div class="stylist-name mb-2 d-flex">
+                        <p class="mb-0">Your Stylist: <strong class="text-brown">Austin</strong> -
+                        </p> <button class="change__button change-stylist__button brown-hover">
+                            (<u>change stylist</u>)</button>
+                    </div>
+                </div>
+                <!--location info-->
+                <div class="appointment-details__location d-flex mb-4 pb-3 border-bottom">
+                    <p class="mb-0">Shop location: <strong class="shop__location text-brown">Lowry |
+                            COLORADO </strong> - </p><button class="change__button change-location__button brown-hover">(<u>switch
+                            shop</u>)</button>
+                </div>
+                <!--services info-->
+                <div class="appointment-details__service">
+                    <div class="appointment-details-service__single border-bottom mb-4 pb-3">
+                        <div class="d-flex">
+                            <div class="service-name__wrapper d-flex">
+                                <div class="service_name text-brown font-weight-bold">
+                                    THE TEN YEAR </div>
+                                <img src="./media/scissors-icon.svg" alt="scissors-icon">
+                            </div>
+                            <!--if extra service show delete button -->
+                            <!-- <button class="change__button text-grey red-hover"><i
+                                    class="fa-solid fa-trash-can"></i>
+                                Remove</button> -->
+                            <div class="service-price text-brown font-weight-bold">
+                                $48.00</div>
+                        </div>
+                        <div class="service-duration text-grey">
+                            Duration: 45 min</div>
+                    </div>
+                    <div class="appointment-details-service__single border-bottom mb-4 pb-3">
+                        <div class="d-flex">
+                            <div class="service-name__wrapper d-flex">
+                                <div class="service_name text-brown font-weight-bold">
+                                    FACIAL HAIR TRIM </div>
+                                <img src="./media/straight-razor-new.svg" alt="razor-icon">
+                            </div>
+                            <!--if extra service show delete button -->
+                            <button class="change__button text-grey red-hover"><i
+                                    class="far fa-trash-alt pr-1"></i>
+                                Remove</button>
+                            <div class="service-price text-brown font-weight-bold">
+                                $26.00</div>
+                        </div>
+                        <div class="service-duration text-grey">
+                            Duration: 30 min</div>
+                    </div>
+                </div>
+                <!--appointment time & date -->
+                <div class="appoinment-details__time">
+                    <!--desktop date & time selector-->
+                    <div class="d-flex desktop__only">
+                        <div class="date-selector">
+                            <label class="font-weight-bold" for="change_date">DATE</label>
+                            <input class="card w-100" data-date="" data-date-format="DD MMMM YYYY" type="date" id="change_date" name="change_date" value="" required>
+                        </div>
+                        <div class="time-selector">
+                            <label for="change_date" class="font-weight-bold text-grey">TIME</label>
+                            <input class="card w-100" type="time" id="change_time" name="change_time" value="5:00 PM" requried>
+                        </div>
+                    </div>
+                    <!--mobile date & time selector-->
+                    <div class="mobile__only">
+                        <p class="font-weight-bold m-0 mb-1">CHANGE DATE & TIME</p>
+                        <div class="card d-flex">
+                            <div class="date-selector">
+                                <label class="font-weight-bold sr-only" for="change_date">DATE</label>
+                                <input class="w-100" data-date="" data-date-format="DD MMMM YYYY" type="date" id="change_date" name="change_date" value="2 Sep 2022" required>
+                            </div>
+                            <div class="content__divider"></div>
+                            <div class="time-selector">
+                                <label for="change_date" class="font-weight-bold text-grey sr-only  ">TIME</label>
+                                <input class="w-100" type="time" id="change_time" name="change_time" value="20:40" requried>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="text-grey pt-2 m-0 desktop__only">
+                        <i>*Did we guess wrong? Click above to change
+                            it</i>
+                    </p>
+                    <p class="text-grey pt-2 m-0 mobile__only">
+                        <i>*Click above to change details</i>
+                    </p>
+                </div>
+
+            </div>
+            <div class="service-summary__wrapper">
+                <div class="card p-5 mb-4">
+                    <div class="border-bottom pb-4 mb-4">
+                        <h2 class="h3 mb-0 text-brown"> Service summary </h2>
+                    </div>
+                    <!-- End Title -->
+                    <div class="pb-4">
+                        <div class="media align-items-center mb-4">
+                            <span class="d-block font-size-1 mr-3">Subtotal</span>
+                            <div class="media-body text-right">
+                                <span class="text-brown font-weight-bold">$42.00</span>
+                            </div>
+                        </div>
+                        <div class="media align-items-center mb-4">
+                            <span class="d-block font-size-1 mr-3">Where</span>
+                            <div class="media-body text-right">
+                                <span class="text-brown"><button
+                                        class="change__button font-weight-bold text-brown"><i
+                                            class="fas fa-map-marker-alt pr-1 text-secondary"></i><u>Denver
+                                            Tech Center,
+                                            CO</u></button></span>
+                            </div>
+                        </div>
+                        <div class="media align-items-center mb-4">
+                            <span class="d-block font-size-1 mr-3">When</span>
+                            <div class="media-body text-right">
+                                <span class="text-brown font-weight-bold">Aug,
+                                    12, 2022 - 11:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="media align-items-center border-bottom pb-3">
+                            <span class="d-block font-size-1 mr-3">Duration</span>
+                            <div class="media-body text-right">
+                                <span class="text-brown font-weight-bold">30
+                                    min</span>
+                            </div>
+                        </div>
+                        <div class="media align-items-center mb-4">
+                            <span class="d-block font-size-1 mr-3"></span>
+                        </div>
+                        <div class="form-group mb-3 desktop__only">
+                            <textarea class="form-control" name="notes" form="booking-form" placeholder="Anything else we need to know?" rows="2"></textarea>
+                        </div>
+                        <form id="booking-form" method="POST" action="/booking-data">
+                            <div class="row mx-1">
+                                <div class="w-100 my-1">
+                                    <button class="btn btn-primary btn-block btn-pill transition-3d-hover" name="complete_booking" value="LFG" type="submit" id="complete_booking" data-total-price="42.0">Book
+                                        Now</button>
+                                </div>
+                                <script type="text/javascript">
+                                    $('#$complete_booking').click(function() {
+                                        var totalPrice = parseFloat($(this).data('total-price'));
+                                        fbq('track', 'Purchase', {
+                                            currency: "USD",
+                                            value: totalPrice
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Promo Code section -->
+                <div id="shopCartAccordion" class="accordion promo-code__wrapper card mb-4">
+                    <!-- Card -->
+                    <div class="card" style="box-shadow: none">
+                        <div class="card-header card-collapse" id="shopCartHeadingOne">
+                            <h3 class="mb-0 promo-code__title">
+                                <a class="btn btn-link btn-block card-btn font-weight-bold  text-brown" href="javascript:;" role="button" data-toggle="collapse" data-target="#shopCartOne" aria-expanded="true" aria-controls="shopCartOne"> Have
+                                    a promo code? </a>
+                            </h3>
+                        </div>
+                        <div id="shopCartOne" class="collapse promo__expand" aria-labelledby="shopCartHeadingOne" data-parent="#shopCartAccordion" style="">
+                            <form class="js-validate p-4" novalidate="novalidate" method="POST" action="/booking-data">
+                                <div class="input-group input-group-pill mb-3">
+                                    <input type="text" class="form-control" name="promo_code" placeholder="Enter promo code" aria-label="Promo code">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-block btn-primary btn-pill promo-btn">Apply</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                </div>
+                <div class="form-group mb-3 mobile__only">
+                    <textarea class="form-control" name="notes" form="booking-form" placeholder="Anything else we need to know?" rows="2"></textarea>
+                </div>
+                <!--Need help section-->
+                <div class="media align-items-center pb-4">
+                    <div class="media-body text-body small">
+                        <span class="font-weight-bold mr-1">Need
+                            Help?</span>
+                        <a class="link-underline" href="tel:7203727859">Call the shop</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="align-items-center text-center pb-3 mobile__only book__later">
+            <div class="media-body text-body small">
+                <span class="font-weight-bold mr-1">Need
+                        Help?</span>
+                <a class="link-underline" href="tel:7203727859">Call the shop</a>
+            </div>
+        </div>
+        <div class="book__later mobile__only text-center pb-2">
+            <a class="font-weight-bold" href=""><i class="fas fa-chevron-left pr-1"></i>I don't
+                want to book an appointment right now</a>
+        </div>
+
+
+        <div class="book__later desktop__only container">
+            <a class="font-weight-bold" href=""><i
+                    class="fas fa-chevron-left pr-1"></i> I
+                don't want to book an appointment right
+                now</a>
+        </div>
+        <!--Modals-->
+        <div class="modal__wrapper select__stylist hide_el">
+            <div class="container">
+                <i class="fas fa-times close__modal"></i>
+                <div class="progress-bar__content space-3 space-top-3 desktop__only">
+                    <p>.../ adjust your usual appointment </p>
+                    <div class="progress-bar">
+                        <div class="progress-bar_fill">
+                        </div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="first-step active__step">
+                            <p class="mb-0">01. Choose your stylist
+                            </p>
+                            <img class="progress__img" src="./media/red-diamond.svg">
+                        </div>
+                        <div class="second-step">
+                            <p class="mb-0">02. Select the day</p>
+                        </div>
+                        <div class="third-step">
+                            <p class="mb-0">03. Choose a time</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar__content progress-bar__mobile space-3 space-top-3 mobile__only">
+                    <p>.../ adjust your usual appointment </p>
+                    <div class="progress-bar mt-5">
+                        <div class="progress-bar_fill">
+                        </div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="first-step active__step">
+                            <p class="mb-0">01. Stylist </p>
+                            <img class="progress__img" src="./media/red-diamond.svg">
+                        </div>
+                        <div class="second-step">
+                            <p class="mb-0">02. Date </p>
+                        </div>
+                        <div class="third-step">
+                            <p class="mb-0">03. Time </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card space-2 space-lg-3 mt-7 main__content">
+                    <div class="col-sm-10 w-md-80 w-lg-60 text-center mx-auto mb-3 fadein-1" style="">
+                        <h2 class="display-5 font-weight-bold uppercase mb-sm-4 fadeInUp u-in-viewport">
+                            select any available stylist below </h2>
+                        <p class="border-bottom pb-3 mb-3"> You are currently with <span><strong
+                                    class="text-brown">Austin</strong></span>, select any other available stylist</p>
+                    </div>
+                    <form method="POST" action="">
+                        <div class="row fadein-1 w-lg-60 w-90 text-center mx-auto justify-content-center" style="">
+                            <div class="col-sm-10 col-lg-6 col-md-8 col-xl-6 mb-3 mb-sm-5 align-center">
+                                <!-- Card -->
+                                <button type="" name="specific_stylist" value="anyone" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0 uppercase">
+                                                    Any stylist </h5>
+                                                <small
+                                                    class="text-body">Price
+                                                    may vary</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <div
+                                                    class="avatar avatar-circle">
+                                                    <img class="avatar-img"
+                                                        src="./media/red-diamond.svg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- End Card -->
+                            </div>
+                            <input id="ga-uuid" type="hidden" value="undefined">
+                            <script>
+                                document.getElementById("ga-uuid").value = gtag('get', 'uuid');
+                            </script>
+                            <div class="col-sm-10 col-lg-6 col-md-8 col-xl-6 mb-3 mb-sm-5 align-center">
+                                <!-- Card -->
+                                <button type="submit" name="specific_stylist" value="197912,Alexandrea (Barber),https://s3.amazonaws.com/mytime_prod/attachments/12379/thumb/Alex.PNG?2019" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0 uppercase">
+                                                    Alexandrea
+                                                    (Barber) </h5>
+                                                <small
+                                                    class="text-body">$48</small>
+                                                <!-- <small class="text-body">Blurb here?</small> -->
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <div
+                                                    class="avatar avatar-circle">
+                                                    <img class="avatar-img"
+                                                        src="https://s3.amazonaws.com/mytime_prod/attachments/12379/thumb/Alex.PNG?2019">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- End Card -->
+                            </div>
+                            <div class="col-sm-10 col-lg-6 col-md-8 col-xl-6 mb-3 mb-sm-5 align-center">
+                                <!-- Card -->
+                                <button type="submit" name="specific_stylist" value="197917,Karel (Barber),https://s3.amazonaws.com/mytime_prod/attachments/16399/thumb/Karel2020.jpg?2021" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0 uppercase">
+                                                    Karel (Barber)
+                                                </h5>
+                                                <small
+                                                    class="text-body">$54</small>
+                                                <!-- <small class="text-body">Blurb here?</small> -->
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <div
+                                                    class="avatar avatar-circle">
+                                                    <img class="avatar-img"
+                                                        src="https://s3.amazonaws.com/mytime_prod/attachments/16399/thumb/Karel2020.jpg?2021">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- End Card -->
+                            </div>
+                            <div class="col-sm-10 col-lg-6 col-md-8 col-xl-6 mb-3 mb-sm-5 align-center">
+                                <!-- Card -->
+                                <button type="submit" name="specific_stylist" value="197935,Marlania (Stylist),https://s3.amazonaws.com/mytime_prod/attachments/12400/thumb/Marlania.PNG?2019" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0 uppercase">
+                                                    Marlania (Stylist)
+                                                </h5>
+                                                <small
+                                                    class="text-body">$54</small>
+                                                <!-- <small class="text-body">Blurb here?</small> -->
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <div
+                                                    class="avatar avatar-circle">
+                                                    <img class="avatar-img"
+                                                        src="https://s3.amazonaws.com/mytime_prod/attachments/12400/thumb/Marlania.PNG?2019">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- End Card -->
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                    </form>
+                </div>
+                <div class="text-center mt-5">
+                    <button type="text" class="font-weight-bold change__button text-secondary pb-3 step__back" href=""><i
+                            class="fas fa-chevron-left pr-1"></i>Back
+                        to your current booking
+                </div>
+            </div>
+        </div>
+        <div class="modal__wrapper select__day hide_el">
+            <div class="container">
+                <i class="fas fa-times close__modal"></i>
+                <div class="progress-bar__content space-3 space-top-3 desktop__only">
+                    <p>.../ adjust your usual appointment </p>
+                    <div class="progress-bar">
+                        <div style='width: 75%' class="progress-bar_fill">
+                        </div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="first-step completed__step">
+                            <p class="mb-0">01. Choose your stylist
+                            </p>
+                            <small class="selected-stylist__name">Alexandrea</small>
+                        </div>
+                        <div class="second-step active__step">
+                            <p class="mb-0">02. Select the day</p>
+                            <img class="progress__img" src="./media/red-diamond.svg">
+                        </div>
+                        <div class="third-step">
+                            <p class="mb-0">03. Choose a time</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar__content progress-bar__mobile space-3 space-top-3 mobile__only">
+                    <p>.../ adjust your usual appointment </p>
+                    <div class="progress-bar mt-5">
+                        <div style='width: 75%' class="progress-bar_fill">
+                        </div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="first-step completed__step">
+                            <p class="mb-0">01. Stylist </p>
+                            <small class="selected-stylist__name">Alexandrea</small>
+                        </div>
+                        <div class="second-step active__step">
+                            <p class="mb-0">02. Date </p>
+                            <img class="progress__img" src="./media/red-diamond.svg">
+                        </div>
+                        <div class="third-step">
+                            <p class="mb-0">03. Time </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card space-2 space-lg-3 mt-7 main__content">
+                    <div class="w-md-80 w-lg-60 text-center mx-auto mb-3 fadein-1" style="">
+                        <h2 class="display-5 font-weight-bold uppercase mb-sm-4 fadeInUp u-in-viewport">
+                            Which day would you like? </h2>
+                        <p class="border-bottom pb-3 mb-3"> Below are the first days <span><strong
+                                    class="text-brown">Alexandrea</strong></span> is avaialable</p>
+                    </div>
+                    <form method="POST" action="/booking-data">
+                        <div class="row fadein-1 w-90 text-center mx-auto justify-content-center" style="">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                                <!-- Card -->
+                                <button type="submit" name="selected_date" value="2022-09-06,Sep. 6, 2022" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0 uppercase">
+                                                    Tuesday </h5>
+                                                <small
+                                                    class="text-body">Sep.
+                                                    6, 2022</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-calendar-alt fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                    <!-- End Card -->
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                    <!-- Card -->
+                    <button type="submit" name="selected_date" value="2022-09-08,Sep. 8, 2022" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0 uppercase">
+                                                    Thursday </h5>
+                                                <small
+                                                    class="text-body">Sep.
+                                                    8, 2022</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-calendar-alt fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                    <!-- End Card -->
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                    <!-- Card -->
+                    <button type="submit" name="selected_date" value="2022-09-09,Sep. 9, 2022" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0 uppercase">
+                                                    Friday </h5>
+                                                <small
+                                                    class="text-body">Sep.
+                                                    9, 2022</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-calendar-alt fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                    <!-- End Card -->
+                </div>
+                <!-- Flatpickr -->
+            </div>
+            </form>
+            <form class="mt-3" name="custom_date" method="POST" action="/booking-data">
+                <div class="row justify-content-center fadein-1" style="">
+                    <div class="col-sm-10 col-lg-4 col-xl-3 mb-3 mb-sm-5 w-90">
+                        <input name="selected_date" id="flatpikr" type="text" class="flatpickr card card-bordered card-hover-shadow h-100 w-100 text-left flatpickr-input" style="color: #1e2022 !important; text-align: center !important; height: 95px !important; padding: 1.5rem; font-weight: bold;"
+                            placeholder="SELECT ANOTHER DATE" readonly="readonly">
+                    </div>
+                </div>
+                <!-- End Flatpicker -->
+            </form>
+        </div>
+        <div class="text-center mt-5 step-back__stylist">
+            <button type="text" class="font-weight-bold change__button text-secondary" href=""><i
+                            class="fas fa-chevron-left pr-1"></i>Choose
+                        a new stylist</button>
+        </div>
+        </div>
+    </div>
+    <div class="modal__wrapper select__time hide_el">
+        <div class="container">
+            <i class="fas fa-times close__modal"></i>
+            <div class="progress-bar__content space-3 space-top-3 desktop__only">
+                <p>.../ adjust your usual appointment </p>
+                <div class="progress-bar">
+                    <div style='width: 98%' class="progress-bar_fill">
+                    </div>
+                </div>
+                <div class="progress-steps">
+                    <div class="first-step completed__step">
+                        <p class="mb-0">01. Choose your stylist
+                        </p>
+                        <small class="selected-stylist__name">Alexandrea</small>
+                    </div>
+                    <div class="second-step completed__step">
+                        <p class="mb-0">02. Select the day</p>
+                        <small class="selected-stylist__name">Sun,
+                                Aug, 13, 2022</small>
+                    </div>
+                    <div class="third-step active__step">
+                        <p class="mb-0">03. Choose a time</p>
+                        <img class="progress__img" src="./media/red-diamond.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar__content progress-bar__mobile space-3 space-top-3 mobile__only">
+                <p>.../ adjust your usual appointment </p>
+                <div class="progress-bar mt-5">
+                    <div style='width: 94%' class="progress-bar_fill">
+                    </div>
+                </div>
+                <div class="progress-steps">
+                    <div class="first-step completed__step">
+                        <p class="mb-0">01. Stylist </p>
+                        <small class="selected-stylist__name">Alexandrea</small>
+                    </div>
+                    <div class="second-step completed__step">
+                        <p class="mb-0">02. Date </p>
+                        <small class="selected-stylist__name">Sun,
+                                Aug, 13, 22</small>
+                    </div>
+                    <div class="third-step active__step">
+                        <p class="mb-0">03. Time </p>
+                        <img class="progress__img" src="./media/red-diamond.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="card space-2 space-lg-3 mt-7 main__content">
+                <div class="w-80 w-lg-60 text-center mx-auto mb-3 fadein-1" style="">
+                    <h2 class="display-5 font-weight-bold uppercase mb-sm-4 fadeInUp u-in-viewport">
+                        WHAT TIME WORKS BEST? </h2>
+                    <p class="border-bottom pb-3 mb-3"> Below is Alexandrea's availability on <span>
+                                <strong class="text-brown">Sun, Aug
+                                    13, 2022</strong></span>
+                    </p>
+                </div>
+                <form name="custom_date2" id="custom_date2" method="POST" action="/booking-data">
+                    <div class="row justify-content-center fadein-1" style="">
+                        <div class="col-sm-10 col-lg-4 col-xl-3 mb-3 mb-sm-5 w-90">
+                            <input name="selected_date" id="flatpikr2" type="text" class="flatpickr card card-bordered card-hover-shadow h-100 w-100 text-left flatpickr-input" style="color: #1e2022 !important; text-align: center !important; height: 95px !important; padding: 1.5rem; font-weight: bold;"
+                                placeholder="CHOOSE A NEW DATE" readonly="readonly">
+                        </div>
+                    </div>
+                </form>
+                <form method="POST" action="/booking-data">
+                    <div class="row w-80 mx-auto justify-content-center fadein-1" style="">
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_time" value="2022-09-08T15:30:00Z,233179,197912,38.0" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0">
+                                                    9:30 AM </h5>
+                                                <small
+                                                    class="text-body">45
+                                                    min</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-clock fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_time" value="2022-09-08T16:00:00Z,233179,197912,38.0" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0">
+                                                    10:00 AM </h5>
+                                                <small
+                                                    class="text-body">45
+                                                    min</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-clock fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_time" value="2022-09-08T16:15:00Z,233179,197912,38.0" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0">
+                                                    10:15 AM </h5>
+                                                <small
+                                                    class="text-body">45
+                                                    min</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-clock fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_time" value="2022-09-08T16:30:00Z,233179,197912,38.0" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0">
+                                                    10:30 AM </h5>
+                                                <small
+                                                    class="text-body">45
+                                                    min</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-clock fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_time" value="2022-09-08T16:45:00Z,233179,197912,38.0" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0">
+                                                    10:45 AM </h5>
+                                                <small
+                                                    class="text-body">45
+                                                    min</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-clock fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_time" value="2022-09-08T19:30:00Z,233179,197912,38.0" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0">
+                                                    1:30 PM </h5>
+                                                <small
+                                                    class="text-body">45
+                                                    min</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-clock fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_time" value="2022-09-08T19:45:00Z,233179,197912,38.0" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0">
+                                                    1:45 PM </h5>
+                                                <small
+                                                    class="text-body">45
+                                                    min</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-clock fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_time" value="2022-09-08T22:45:00Z,233179,197912,38.0" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0">
+                                                    4:45 PM </h5>
+                                                <small
+                                                    class="text-body">45
+                                                    min</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-clock fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_time" value="2022-09-08T23:15:00Z,233179,197912,38.0" class="card card-bordered card-hover-shadow h-100 w-100 text-left loading-trigger">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0">
+                                                    5:15 PM </h5>
+                                                <small
+                                                    class="text-body">45
+                                                    min</small>
+                                            </div>
+                                            <div
+                                                class="text-primary text-hover-primary pl-2 ml-auto">
+                                                <i
+                                                    class="far fa-clock fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="text-center mt-5 step-back__stylist">
+                <button type="text" class="font-weight-bold change__button text-secondary" href=""><i
+                            class="fas fa-chevron-left pr-1"></i>Choose
+                        a new stylist</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal__wrapper change__location hide_el">
+        <div class="container">
+            <i class="fas fa-times close__modal"></i>
+            <div class="progress-bar__content space-3 space-top-3 desktop__only">
+                <p>.../ adjust your usual appointment </p>
+                <div class="progress-bar">
+                    <div style='width: 25%' class="progress-bar_fill">
+                    </div>
+                </div>
+                <div class="progress-steps">
+                    <div class="first-step active__step">
+                        <p class="mb-0">01. Select Location </p>
+                        <img class="progress__img" src="./media/red-diamond.svg">
+                    </div>
+                    <div class="second-step">
+                        <p class="mb-0">02. Choose your stylist
+                        </p>
+                    </div>
+                    <div class="third-step">
+                        <p class="mb-0">03. Select the day</p>
+                    </div>
+                    <div class="fourth-step">
+                        <p class="mb-0">04. Choose a time</p>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar__content progress-bar__mobile space-3 space-top-3 mobile__only">
+                <p>.../ adjust your usual appointment </p>
+                <div class="progress-bar mt-5">
+                    <div style='width: 38%' class="progress-bar_fill">
+                    </div>
+                </div>
+                <div class="progress-steps justify-content-center">
+                    <div class="first-step active__step">
+                        <p class="mb-0">01. Location </p>
+                        <img class="progress__img" src="./media/red-diamond.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="card space-2 space-lg-3 mt-7 main__content">
+                <div class="w-80 w-lg-60 text-center mx-auto mb-3 fadein-1" style="">
+                    <h2 class="display-5 font-weight-bold uppercase mb-sm-4 fadeInUp u-in-viewport">
+                        SELECT A NEW LOCATION </h2>
+                    <p class="border-bottom pb-3 mb-3"> You current location is: <span> <strong
+                                    class="text-brown">Lowry |
+                                    Colorado</strong></span>
+                    </p>
+                </div>
+                <form method="POST" class="w-80 mx-auto text-center">
+                    <label for="search_location" class="sr-only">Search Location</label>
+                    <div class="search-input__wrapper d-flex justify-content-center mb-5">
+                        <input type="search" placeholder="Search for location" class="card justify-content-center fadein-1 search-location__input">
+                        <button type="text" class="change__button text-brown ml-5"><u>View
+                                    all locations</u></button>
+                    </div>
+                    <p>Other locations near <strong class="text-brown">Lowry,
+                                Colorado:</strong></p>
+                    <div class="row justify-content-center fadein-1" style="">
+                        <div class="col-sm-6 col-lg-6 col-xl-4 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_date" value="2022-09-06,Sep. 6, 2022" class="card card-bordered card-hover-shadow text-left loading-trigger h-100 w-100">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                
+                                                <h5
+                                                
+                                                    class="text-hover-primary mb-0 uppercase">
+                                                    <i class="fas fa-map-marker-alt text-secondary pr-1"></i>
+                                                    Denver Tech Centre
+                                                </h5>
+                                                <small
+                                                    class="text-body">7600
+                                                    Landmark Way STE
+                                                    107, Greenwood
+                                                    Village</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <div class="col-sm-6 col-lg-6 col-xl-4 mb-3 mb-sm-5">
+                            <!-- Card -->
+                            <button type="submit" name="selected_date" value="2022-09-08,Sep. 8, 2022" class="card card-bordered card-hover-shadow text-left loading-trigger h-100 w-100">
+                                    <div class="card-body w-100">
+                                        <div
+                                            class="media align-items-center">
+                                            <div class="media-body">
+                                                <h5
+                                                    class="text-hover-primary mb-0 uppercase">
+                                                    <i class="fas fa-map-marker-alt text-secondary pr-1"></i>
+                                                    Parker</h5>
+                                                <small
+                                                    class="text-body">12227
+                                                    Pine Bluffs Way
+                                                    Suite 109,
+                                                    Parker</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            <!-- End Card -->
+                        </div>
+                        <!-- Flatpickr -->
+                    </div>
+                </form>
+            </div>
+            <div class="text-center mt-5">
+                <button type="text" class="font-weight-bold change__button text-secondary pb-3 step__back" href=""><i
+                            class="fas fa-chevron-left pr-1"></i>Back
+                        to your current booking
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
