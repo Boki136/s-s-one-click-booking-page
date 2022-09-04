@@ -128,6 +128,19 @@
     padding-left: 8px;
 }
 
+.extra-services__wrapper {
+    cursor: pointer;
+}
+
+.extra-services__wrapper .appointment-details-service__single {
+    display: none;
+}
+
+.extra-services__wrapper p .fa-chevron-down {
+    font-size: .9em;
+    padding-left: 2px;
+}
+
 .appointment-details__wrapper {
     width: 65%;
     align-self: flex-start;
@@ -196,9 +209,13 @@
     overflow: visible !important;
 }
 
+.search-bar__content {
+    width: 60%;
+}
+
 .search-location__input {
     height: 43px;
-    width: 60%;
+    width: 100%;
     padding: 0 20px 0 60px;
     background: url('./media/search--icon.svg')no-repeat left 23px center;
     font-size: 14px;
@@ -334,6 +351,24 @@
 
 .progress-bar__mobile .third-step .progress__img {
     left: 82%;
+}
+
+.locations__results {
+    text-align: left;
+}
+
+.location-city__name,
+.location-shop__name {
+    font-size: 1em;
+}
+
+.locations-city__listing {
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.locations-city__listing:hover {
+    background-color: #fafafa;
 }
 
 
@@ -482,13 +517,16 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .search-input__wrapper {
-        flex-wrap: wrap;
-    }
-    .search-input__wrapper input {
+    .search-bar__content {
         width: 100%;
     }
-    .search-input__wrapper button {
+    .search-location__wrapper {
+        flex-wrap: wrap;
+    }
+    .search-location__wrapper input {
+        width: 100%;
+    }
+    .search-location__wrapper button {
         padding: 0 !important;
         margin-left: 0 !important;
         margin-top: 18px;
