@@ -10,13 +10,13 @@ $('.change-location__button').click(function() {
 $('.close__modal').click(function() {
     $(this).closest('.modal__wrapper').addClass('hide_el');
     $('body').css('overflow', 'visible');
-});
+})
 
 $('.step__back').click(function() {
     $('body').css('overflow', 'visible');
-});
+})
 
-//remove when buttons are working --start
+//remove when modal buttons are working start
 
 let specificStylistBtn = $('.select__stylist form button');
 let specificDateBtn = $('.select__day form button');
@@ -39,7 +39,7 @@ specificTimeBtn.closest('form').on('submit', function(e) {
     $('.select__time').addClass('hide_el');
 })
 
-//remove when buttons are working --end
+//remove when modal buttons are working end
 
 $('.modal__wrapper .step-back__stylist').click(function() {
     $(this).closest('.modal__wrapper').addClass('hide_el');
@@ -60,4 +60,30 @@ $('.promo-code__title').click(function() {
             $('#shopCartOne').slideUp(200);
         }, 100)
     }
-})
+});
+
+$('.extra-services__wrapper').click(function() {
+    clickCount++;
+
+    $(this).find('.appointment-details-service__single').slideDown(150);
+    $(this).find('.fa-chevron-down').css('transform', 'rotate(180deg)');
+
+    if (clickCount % 2) {
+        setTimeout(function() {
+            $('.extra-services__wrapper').find('.appointment-details-service__single').slideUp(150);
+            $('.extra-services__wrapper').find('.fa-chevron-down').css('transform', 'rotate(0deg)');
+        }, 100)
+    }
+});
+
+$('.search-bar__content input').on('keypress', function() {
+
+    if ($(this).val() == '') {
+        $('.locations__results').slideUp(250);
+    } else {
+        $('.locations__results').slideDown(250);
+    }
+
+
+
+});
