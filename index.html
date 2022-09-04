@@ -203,9 +203,10 @@
                                 $48.00</div>
                         </div>
                         <div class="service-duration text-grey">
-                            Duration: 45 min</div>
+                            Duration: 45 min
+                        </div>
                     </div>
-                    <div class="appointment-details-service__single border-bottom mb-4 pb-3">
+                    <div class="appointment-details-service__single border-bottom mb-4 pb-3 desktop__only">
                         <div class="d-flex">
                             <div class="service-name__wrapper d-flex">
                                 <div class="service_name text-brown font-weight-bold">
@@ -220,8 +221,31 @@
                                 $26.00</div>
                         </div>
                         <div class="service-duration text-grey">
-                            Duration: 30 min</div>
+                            Duration: 30 min
+                        </div>
                     </div>
+                    <div class="extra-services__wrapper mobile__only">
+                        <p class="border-bottom pb-2 extra-services__show">+<span>1</span> extra service <i class="fas fa-chevron-down"></i></p>
+                        <div class="appointment-details-service__single border-bottom mb-4 pb-3">
+                            <div class="d-flex">
+                                <div class="service-name__wrapper d-flex">
+                                    <div class="service_name text-brown font-weight-bold">
+                                        FACIAL HAIR TRIM </div>
+                                    <img src="./media/straight-razor-new.svg" alt="razor-icon">
+                                </div>
+                                <!--if extra service show delete button -->
+                                <button class="change__button text-grey red-hover"><i
+                                        class="far fa-trash-alt pr-1"></i>
+                                    Remove</button>
+                                <div class="service-price text-brown font-weight-bold">
+                                    $26.00</div>
+                            </div>
+                            <div class="service-duration text-grey">
+                                Duration: 30 min
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <!--appointment time & date -->
                 <div class="appoinment-details__time">
@@ -1045,10 +1069,21 @@
                 </div>
                 <form method="POST" class="w-80 mx-auto text-center">
                     <label for="search_location" class="sr-only">Search Location</label>
-                    <div class="search-input__wrapper d-flex justify-content-center mb-5">
-                        <input type="search" placeholder="Search for location" class="card justify-content-center fadein-1 search-location__input">
-                        <button type="text" class="change__button text-brown ml-5"><u>View
-                                    all locations</u></button>
+                    <div class="search-location__wrapper  d-flex justify-content-center mb-5">
+                        <div class="search-bar__content">
+                            <input type="search" placeholder="Search for location" class="card justify-content-center fadein-1 search-location__input">
+                            <div class="locations__results card pt-3 pb-3 mt-3 hide_el">
+                                <div class="location__city">
+                                    <h3 class="location-city__name border-bottom mb-2 pb-2 text-brown w-90 mx-auto">D.C.</h3>
+                                    <div class="locations-city__listing">
+                                        <h4 class="mb-1 location-shop__name text-brown w-90 mx-auto">Union Market</h4>
+                                        <p class="text-grey text-small w-90 mx-auto">31 N St NE, Washington, DC 20002</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="text" class="change__button text-brown ml-5"><u>View all locations</u></button>
                     </div>
                     <p>Other locations near <strong class="text-brown">Lowry,
                                 Colorado:</strong></p>
