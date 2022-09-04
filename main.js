@@ -63,11 +63,11 @@ $('.promo-code__title').click(function() {
 
 });
 
-$('.extra-services__wrapper').click(function() {
+$('.extra-services__wrapper p').click(function() {
     clickCount++;
 
-    $(this).find('.appointment-details-service__single').slideDown(150);
-    $(this).find('.fa-chevron-down').css('transform', 'rotate(180deg)');
+    $(this).parent().find('.appointment-details-service__single').slideDown(150);
+    $(this).parent().find('.fa-chevron-down').css('transform', 'rotate(180deg)');
 
     if (clickCount % 2) {
         setTimeout(function() {
