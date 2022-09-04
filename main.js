@@ -2,7 +2,7 @@ $('.change-stylist__button').click(function() {
     $('.select__stylist').removeClass('hide_el');
     $('body').css('overflow', 'hidden');
 });
-$('.change-location__button').click(function() {
+$('.change-location__button, .summary__location').click(function() {
     $('.change__location').removeClass('hide_el');
     $('body').css('overflow', 'hidden');
 });
@@ -60,6 +60,7 @@ $('.promo-code__title').click(function() {
             $('#shopCartOne').slideUp(200);
         }, 100)
     }
+
 });
 
 $('.extra-services__wrapper').click(function() {
@@ -74,6 +75,8 @@ $('.extra-services__wrapper').click(function() {
             $('.extra-services__wrapper').find('.fa-chevron-down').css('transform', 'rotate(0deg)');
         }, 100)
     }
+
+
 });
 
 $('.search-bar__content input').on('keypress', function() {
@@ -83,6 +86,7 @@ $('.search-bar__content input').on('keypress', function() {
     } else {
         $('.locations__results').slideDown(250);
     }
+
 
 
 
