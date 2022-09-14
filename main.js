@@ -16,7 +16,7 @@ $('.step__back').click(function() {
     $('body').css('overflow', 'visible');
 })
 
-//remove when modal buttons are working start
+/////////////////// remove when modal buttons are working start
 
 let specificStylistBtn = $('.select__stylist form button');
 let specificDateBtn = $('.select__day form button');
@@ -39,17 +39,20 @@ specificTimeBtn.closest('form').on('submit', function(e) {
     $('.select__time').addClass('hide_el');
 })
 
-//remove when modal buttons are working end
+//////////////////// remove when modal buttons are working end
+
+//return back to stylist selection
 
 $('.modal__wrapper .step-back__stylist').click(function() {
     $(this).closest('.modal__wrapper').addClass('hide_el');
-    $('.select__stylist').removeClass('hide_el')
+    $('.select__stylist').removeClass('hide_el');
 })
 
 $('.modal__wrapper .step__back').click(function() {
-        $(this).closest('.modal__wrapper').addClass('hide_el');
-    })
-    //open promo box
+    $(this).closest('.modal__wrapper').addClass('hide_el');
+});
+
+//open promo box
 let clickCount = 1;
 $('.promo-code__title').click(function() {
     clickCount++;
@@ -58,7 +61,7 @@ $('.promo-code__title').click(function() {
     if (clickCount % 2) {
         setTimeout(function() {
             $('#shopCartOne').slideUp(200);
-        }, 100)
+        }, 100);
     }
 
 });
@@ -86,8 +89,4 @@ $('.search-bar__content input').on('keypress', function() {
     } else {
         $('.locations__results').slideDown(250);
     }
-
-
-
-
 });
