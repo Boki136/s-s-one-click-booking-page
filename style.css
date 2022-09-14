@@ -109,9 +109,13 @@
 }
 
 .book__later.desktop__only {
-    position: relative;
-    bottom: 65px;
-    left: 8%;
+    position: absolute;
+    bottom: -75px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 .tooltip__wrapper:hover .tooltiptext,
@@ -243,7 +247,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, .97);
+    background: rgba(255, 255, 255, 1);
     z-index: 9999;
     background-image: url('./media/diamond-background.svg');
     background-position: center top;
@@ -345,6 +349,10 @@
     left: 36%;
 }
 
+.search-location__wrapper {
+    align-items: flex-start;
+}
+
 .progress-bar__mobile .progress__img {
     top: 82px;
     width: 40px;
@@ -378,6 +386,22 @@
 @media only screen and (min-width: 1920px) {
     .background-img--wrapper {
         background-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1480px) {
+    .hero-text__wrapper {
+        padding: 5rem 0 5.5rem 0 !important;
+    }
+    .progress-bar__content {
+        padding-top: 3.5rem !important;
+    }
+    .progress__img {
+        top: 72px;
+    }
+    .modal__wrapper .main__content {
+        margin-top: 20px !important;
+        padding: 4.5rem 0 !important;
     }
 }
 
@@ -543,6 +567,9 @@
     }
     .close__modal {
         right: 25px;
+    }
+    .modal__wrapper .main__content {
+        padding: 2.5rem 0 !important;
     }
 }
 
